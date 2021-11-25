@@ -1,3 +1,2 @@
-﻿  Math.cpp
-D:\BigInteger_Calc-master\BigInteger_Cal\Math\Math.cpp(32,2): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+﻿  action_parser.cpp
   BigInteger_Cal.vcxproj -> D:\BigInteger_Calc-master\x64\Debug\BigInteger_Calc.exe

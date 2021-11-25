@@ -12,18 +12,21 @@ void parse_plus(arguments){
 		res = addition(a, b);
 	}
 	else{
-		if (lt(a, b)){
-			bigint tmp = a;
-			a = b, b = tmp;
-		}
 		if (a_negate){
-
-			res_negate = 1;
+			if (lt(a, b)) {
+				bigint tmp = a;
+				a = b, b = tmp, res_negate = 0;
+			}
+			else res_negate = 1;
 			res = subscription(a, b);
 		}
 		else{
+			if (lt(a, b)) {
+				bigint tmp = a;
+				a = b, b = tmp, res_negate = 1;
+			}
+			else res_negate = 0;
 			res = subscription(a, b);
-			if (!a_negate && b_negate)res_negate = 1;
 		}
 	}
 	print_bigint(res, res_negate);
@@ -42,8 +45,17 @@ void parse_minus(arguments){
 				res_negate = 0;
 			res = subscription(a, b);
 		}
-		else
-			res_negate = 1, res = addition(a, b);
+		else {
+			if (lt(a, b)) {
+				bigint tmp = a;
+				a = b, b = tmp;
+				res_negate = 0;
+			}
+			else
+				res_negate = 1;
+			res = subscription(a, b);
+
+		}
 	}
 	else{
 		if (!a_negate && b_negate)res = addition(a, b), res_negate = 0;
@@ -64,11 +76,11 @@ void parse_multiplication(arguments){
 	print_bigint(res, res_negate);
 }
 void parse(string action,bigint a, bigint b, bool a_negate, bool b_negate){
-	if (action[0] == '+')
+	if (action == "+")
 		parse_plus(args);
-	else if (action[0] == '-')
+	else if (action == "-")
 		parse_minus(args);
-	else if (action[0] == '*')
+	else if (action == "*")
 		parse_multiplication(args);
 	else
 		cout << RED << "RTFM!\n" << DEFAULT;

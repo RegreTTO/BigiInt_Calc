@@ -16,7 +16,6 @@ vector<string> read_str_array(){
 	string s;
 	getline(cin, s);
 	vector<string> v = split(s);
-
 	return v;
 
 }
@@ -27,10 +26,16 @@ bigint convert_string_to_bigint(string s, bool negate = 0){
 	for (int i = n; i > 0; i -= 9){
 		string tmp = "";
 		if (i < 9)
-			bn.push_back(my_atoi(my_substr(s, negate, i)));
+			bn.push_back(my_atoi(my_substr(s, negate, i-negate)));
 		else
-			bn.push_back(my_atoi(my_substr(s, i - 9, 9)));
+		{
+			if (i - 9 == 0)
+				bn.push_back(my_atoi(my_substr(s, i - 9 + negate, 9)));
+			else bn.push_back(my_atoi(my_substr(s, i - 9, 9)));
+		}
 	}
+	while (bn.size() > 1 && bn[bn.size() - 1] == 0)
+		bn.pop_back();
 	return bn;
 }
 
