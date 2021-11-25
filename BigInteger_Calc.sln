@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BigInteger_Cal", "BigInteger_Cal\BigInteger_Cal.vcxproj", "{5DB0E2B0-9370-4008-95E2-31B2B7B75470}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Debug|x64.ActiveCfg = Debug|x64
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Debug|x64.Build.0 = Debug|x64
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Debug|x86.ActiveCfg = Debug|Win32
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Debug|x86.Build.0 = Debug|Win32
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Release|x64.ActiveCfg = Release|x64
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Release|x64.Build.0 = Release|x64
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Release|x86.ActiveCfg = Release|Win32
+		{5DB0E2B0-9370-4008-95E2-31B2B7B75470}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A724C433-E0E9-4671-B143-A86EEADE9C2A}
+	EndGlobalSection
+EndGlobal
